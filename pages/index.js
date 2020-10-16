@@ -24,7 +24,7 @@ export default function Home() {
       <main className={styles.main}>
       <h1 className={styles.title}>This is my stock list</h1>
         {data.map((item)=>{
-          return <h2 key={item.id}>Stock:<span className="green">{item.name} </span>price: <span className="red">{!item.price?item.price=0:item.price}</span></h2>
+          return <h2 key={item.id}>Stock:<span className="green">{item.name} </span>price: <span className="red">{!item.price?item.price='N/A':item.price}</span></h2>
         })}
       </main>
     </div>
