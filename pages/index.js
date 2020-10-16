@@ -22,10 +22,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+      <h1 className={styles.title}>This is my list</h1>
         {data.results.map((item)=>{
           return <h2 key={item.url}>Hi, I am {item.name}</h2>
         })}
-        <h1 className={styles.title}>This is my stocks</h1>
       </main>
     </div>
   )
