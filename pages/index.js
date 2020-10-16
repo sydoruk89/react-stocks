@@ -9,7 +9,7 @@ const fetcher = async (url) => {
 }
 
 export default function Home() {
-  const apiUrl = 'https://swapi.dev/api/people/'
+  const apiUrl = 'https://react-stocks-api.herokuapp.com/api/v1/stocks/'
   const { data, error } = useSWR(apiUrl, fetcher)
 
   if (error) return <div>failed to load</div>
@@ -22,9 +22,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <h1 className={styles.title}>This is my list</h1>
-        {data.results.map((item)=>{
-          return <h2 key={item.url}>Hi, I am {item.name}</h2>
+      <h1 className={styles.title}>This is my stock list</h1>
+        {data.map((item)=>{
+          return <h2 key={item.id}>Stock:<span className="green">{item.name} </span>price: <span className="red">{!item.price?item.price=0:item.price}</span></h2>
         })}
       </main>
     </div>

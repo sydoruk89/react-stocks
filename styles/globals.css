@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+.green{
+  color: rgb(10, 116, 10)
+}
+.red{
+  color: rgb(182, 3, 3)
+}
